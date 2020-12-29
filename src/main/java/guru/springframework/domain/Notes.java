@@ -1,6 +1,7 @@
 package guru.springframework.domain;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Notes {
@@ -33,10 +34,10 @@ public class Notes {
     }
 
     public String getDescription() {
-        return description;
+        return recipeNotes;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescription(String recipeNotes) {
+        this.recipeNotes = recipeNotes;
     }
 }
