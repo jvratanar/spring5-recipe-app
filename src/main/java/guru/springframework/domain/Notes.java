@@ -33,11 +33,11 @@ public class Notes {
         this.recipe = recipe;
     }
 
-    public String getDescription() {
+    public String getRecipeNotes() {
         return recipeNotes;
     }
 
-    public void setDescription(String recipeNotes) {
+    public void setRecipeNotes(String recipeNotes) {
         this.recipeNotes = recipeNotes;
     }
 }
