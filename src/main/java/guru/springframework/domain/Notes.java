@@ -6,6 +6,8 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Data
+// Avoid bidirectional properties in the
+// calculation of hashCode and equals method
 @EqualsAndHashCode(exclude = {"recipe"})
 @Entity
 public class Notes {

@@ -8,6 +8,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Data
+// Avoid bidirectional relations properties in the
+// calculation of hashCode and equals method
 @EqualsAndHashCode(exclude = {"recipes"})
 @Entity
 public class Category {
