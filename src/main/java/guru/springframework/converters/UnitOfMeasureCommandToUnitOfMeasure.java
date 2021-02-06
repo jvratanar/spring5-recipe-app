@@ -5,7 +5,9 @@ import guru.springframework.domain.UnitOfMeasure;
 import lombok.Synchronized;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UnitOfMeasureCommandToUnitOfMeasure implements Converter<UnitOfMeasureCommand, UnitOfMeasure> {
     @Synchronized   // make it thread safe
     @Nullable
@@ -18,7 +20,7 @@ public class UnitOfMeasureCommandToUnitOfMeasure implements Converter<UnitOfMeas
         // make it immutable
         final UnitOfMeasure uof = new UnitOfMeasure();
         uof.setId(source.getId());
-        uof.setId(source.getId());
+        uof.setDescription(source.getDescription());
         return uof;
     }
 }
