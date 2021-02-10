@@ -87,4 +87,16 @@ public class RecipeServiceImplTest {
         // verify that findAll method has been called once
         verify(this.recipeRepository, times(1)).findAll();
     }
+
+    @Test
+    public void testDeleteById() {
+        // given
+        Long idToDelete = Long.valueOf(2l);
+
+        // when
+        this.recipeService.deleteById(idToDelete);
+
+        // then
+        verify(this.recipeRepository, times(1)).deleteById(anyLong());
+    }
 }
