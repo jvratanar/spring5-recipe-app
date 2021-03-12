@@ -67,10 +67,13 @@
                                 </div>
                                 <div class="col-md-3 form-group">
                                     <label>Difficulty:</label>
-                                    <select class="form-control">
-                                        <option>Easy</option>
-                                        <option>Medium</option>
-                                        <option>Hard</option>
+                                    <select class="form-control" th:field="*{difficulty}">
+                                        <!-- T in thymeleaf is a type -->
+                                        <option
+                                                th:each="difficultyValue : ${T(guru.springframework.domain.Difficulty).values()}"
+                                                th:value="${difficultyValue.name()}"
+                                                th:text="${difficultyValue.name()}"
+                                        >Val</option>
                                     </select>
                                 </div>
                             </div>
