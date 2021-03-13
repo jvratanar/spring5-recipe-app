@@ -8,6 +8,8 @@ import java.util.Set;
 
 @Data
 @Entity
+// Recommended to use boxed version of types not the primitive ones
+// as those cannot have null value.
 public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
